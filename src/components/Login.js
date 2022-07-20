@@ -7,6 +7,9 @@ const Login = (props) => {
         <CTA>
           <CTALogoOne src="/images/cta-logo-one.svg" alt='' />
           <SignUp>GET ALL THERE</SignUp>
+          <Description>
+            Get Premier Access to Raya and the Last Dragon for an additional fee  with a Disney+ Subscsription. As of 03/26/2021 , the price of Disney+ and the Disney Bundle will increase by $1.
+          </Description>
         </CTA>
         <BgImage />
       </Content>
@@ -52,6 +55,7 @@ const CTA = styled.div`
   flex-direction: column;
   max-width: 650px;
   width: 100%;
+  text-align: center;
 `;
 
 const CTALogoOne = styled.img`
@@ -78,6 +82,14 @@ const SignUp = styled.div`
   &:hover {
     background-color: #0483ee;
   }
+`;
+
+const Description = styled.p`
+  letter-spacing: 1.5px;
+  font-size: 12px;
+  color: hsla(0%, 0%, 95.3%, 1);
+  margin: 0 0 24px;
+  line-height: 1.5;
 `;
 
 export default Login;
