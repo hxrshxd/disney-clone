@@ -10,6 +10,7 @@ const Login = (props) => {
           <Description>
             Get Premier Access to Raya and the Last Dragon for an additional fee  with a Disney+ Subscsription. As of 03/26/2021 , the price of Disney+ and the Disney Bundle will increase by $1.
           </Description>
+          <CTALogoTwo src="/images/cta-logo-two.png" alt='' />
         </CTA>
         <BgImage />
       </Content>
@@ -90,6 +91,14 @@ const Description = styled.p`
   color: hsla(0%, 0%, 95.3%, 1);
   margin: 0 0 24px;
   line-height: 1.5;
+`;
+
+const CTALogoTwo = styled.img`
+  max-width: 600px;
+  display: inline-block;
+  margin-bottom: 20px;
+  width: 100%;
+  vertical-align: bottom;
 `;
 
 export default Login;
