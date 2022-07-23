@@ -6,7 +6,32 @@ const Header = (props) => {
       <Logo>
         <img src='./images/logo.svg' alt='Disney+' />
       </Logo>
-      <NavMenu>menu</NavMenu>
+      <NavMenu>
+        <a href='/home'>
+          <img src='/images/home-icon.svg' alt='home' />
+          <span>HOME</span>
+        </a>
+        <a href='/search'>
+          <img src='/images/search-icon.svg' alt='search' />
+          <span>SEARCH</span>
+        </a>
+        <a href='/watchlist'>
+          <img src='/images/watchlist-icon.svg' alt='watchlist' />
+          <span>WATCHLIST</span>
+        </a>
+        <a href='/originals'>
+          <img src='/images/original-icon.svg' alt='originals' />
+          <span>ORIGINALS</span>
+        </a>
+        <a href='/movie'>
+          <img src='/images/movie-icon.svg' alt='movie' />
+          <span>MOVIE</span>
+        </a>
+        <a href='/series'>
+          <img src='/images/series-icon.svg' alt='series' />
+          <span>SERIES</span>
+        </a>
+      </NavMenu>
     </Nav>
   )
 }
@@ -50,6 +75,53 @@ const NavMenu = styled.div`
   padding: 0;
   flex-flow: row nowrap;
   position: relative;
+
+  a {
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+
+    img {
+      height: 20px;
+      min-width: 20px;
+      width: 20px;
+    }
+
+    span {
+      font-size: 13px;
+      padding: 2px 0 0 4px;
+      position: relative;
+      white-space: nowrap;
+      letter-spacing: 1.48px;
+      line-height: 1.27;
+      color: rgb(249, 249, 249);
+
+      &:before {
+        background-color: rgb(249, 249, 249);
+        content: "";
+        bottom: -6px;
+        left: 0;
+        right: 0;
+        position: absolute;
+        border-radius: 0 0 4px 4px;
+        transform-origin: left center;
+        transform: scaleX(0);
+        height: 2px;
+        width: auto;
+        transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+        visibility: hidden;
+        opacity: 0;
+      }
+    }
+
+    &:hover {
+      span:before {
+        transform: scaleX(1);
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
 
   @media (max-width: 786px) {
     display: none;
